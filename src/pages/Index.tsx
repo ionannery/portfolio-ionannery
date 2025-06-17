@@ -1,11 +1,10 @@
-
 import { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail, Phone, MapPin, ExternalLink, Code, Server, Cloud, Database, Monitor, Zap } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, Server, Cloud, Database, Monitor} from 'lucide-react';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -37,76 +36,122 @@ const Index = () => {
     }
   };
 
-  const skills = [
-    'AWS', 'Azure', 'Docker', 'Kubernetes', 'Terraform', 'Ansible', 
-    'Jenkins', 'GitLab CI/CD', 'Python', 'Bash', 'Linux', 'Monitoring'
-  ];
+
+  const githubUrl = "https://github.com/ionannery";
+  const linkedinUrl = "https://www.linkedin.com/in/ionan-nery/";
 
   const projects = [
     {
-      title: 'Infrastructure as Code Platform',
-      description: 'Plataforma completa de IaC usando Terraform e AWS para provisionamento automatizado de recursos cloud.',
-      technologies: ['Terraform', 'AWS', 'Python', 'Docker'],
-      github: '#',
-      demo: '#'
+      title: 'project-terraform-AWS-app-BIA',
+      description: 'Provisionamento completo de infraestrutura AWS via Terraform: VPC, ECS, RDS, Auto Scaling, ALB, ACM, S3, CloudWatch, IAM, EC2, Route 53 e Secrets Manager. Ideal para deploy automatizado e escalável de aplicações web.',
+      technologies: ['Terraform', 'AWS', 'ECS', 'RDS', 'ALB', 'ACM', 'S3', 'CloudWatch', 'IAM', 'EC2', 'Route 53'],
+      github: 'https://github.com/ionannery/project-terraform-AWS-app-BIA',
     },
     {
-      title: 'CI/CD Pipeline Automation',
-      description: 'Sistema robusto de CI/CD com Jenkins e GitLab para deployment automatizado e integração contínua.',
-      technologies: ['Jenkins', 'GitLab', 'Docker', 'Kubernetes'],
-      github: '#',
-      demo: '#'
+      title: 'iac-alura',
+      description: 'Infraestrutura como código para ambientes EC2 na AWS, com separação de produção e desenvolvimento, configuração automática via Ansible e deploy de API Django. Inclui balanceamento de carga.',
+      technologies: ['Terraform', 'AWS', 'EC2', 'Ansible', 'Django', 'Load Balancer'],
+      github: 'https://github.com/ionannery/iac-alura',
     },
     {
-      title: 'Monitoring & Alerting System',
-      description: 'Stack completo de monitoramento com Prometheus, Grafana e alertas inteligentes para infraestrutura.',
-      technologies: ['Prometheus', 'Grafana', 'ELK Stack', 'Python'],
-      github: '#',
-      demo: '#'
+      title: 'project-pixels-art',
+      description: 'Aplicação web para criar e colorir desenhos em um quadro de pixels. Desenvolvido com JavaScript, HTML e CSS.',
+      technologies: ['JavaScript', 'HTML', 'CSS'],
+      github: 'https://github.com/ionannery/project-pixels-art',
     },
     {
-      title: 'Cloud Migration Tool',
-      description: 'Ferramenta para migração automatizada de aplicações legacy para arquitetura cloud-native.',
-      technologies: ['Python', 'AWS', 'Docker', 'Terraform'],
-      github: '#',
-      demo: '#'
-    }
+      title: 'bia',
+      description: 'Deploy automatizado de aplicação Node.js na AWS usando ECS, ALB, Route53 e HTTPS via ACM. Projeto prático do bootcamp AWS.',
+      technologies: ['AWS', 'ECS', 'ALB', 'Route53', 'HTTPS', 'Docker', 'Node.js'],
+      github: 'https://github.com/ionannery/bia',
+    },
+    {
+      title: 'CI-CD-GO-Github-Actions-alura',
+      description: 'Exemplo de pipeline CI/CD para aplicações Go, usando Github Actions para build, testes e deploy automatizados.',
+      technologies: ['Go', 'Github Actions', 'CI/CD'],
+      github: 'https://github.com/ionannery/CI-CD-GO-Github-Actions-alura',
+    },
+    {
+      title: 'quality_gtsnetv1',
+      description: 'Sistema web para automação de relatórios e geração de scripts de configuração para Unidades Lotéricas. Backend Node.js/Express, frontend HTML/CSS/JS, geração de PDF, upload de imagens e busca de relatórios.',
+      technologies: ['Node.js', 'Express', 'HTML', 'CSS', 'JavaScript', 'PDF'],
+      github: 'https://github.com/ionannery/quality_gtsnetv1',
+    },
   ];
 
   const experiences = [
     {
-      role: 'DevOps Engineer Senior',
-      company: 'Tech Solutions Corp',
-      period: '2022 - Presente',
-      description: 'Liderança técnica em projetos de transformação digital, implementação de practices DevOps e automação de infraestrutura cloud.',
+      role: 'Network Support Analyst',
+      company: 'Mamtech Tecnologia',
+      period: 'fev de 2025 - o momento · 5 meses',
+      location: 'Teresina, Piauí, Brasil · Presencial',
+      description: [
+        'Atendimento de chamados via STC e SGFT, solucionando problemas de rede.',
+        'Suporte técnico remoto e em campo para clientes e equipe.',
+        'Troubleshooting de redes, identificando e corrigindo falhas.',
+        'Manutenção e configuração de equipamentos Cisco, Mikrotik, Meraki, Elsys e Fortinet.',
+        'Gerenciamento de roteadores, switches, firewalls e access points.',
+        'Monitoramento de redes para garantir desempenho e disponibilidade.',
+        'Implementação de políticas de segurança: VPNs, filtros de tráfego e controle de acesso.',
+        'Documentação técnica de procedimentos e topologias.',
+        'Colaboração em projetos de infraestrutura de rede com a equipe de TI.'
+      ],
       achievements: [
-        'Reduziu tempo de deployment em 70% através de CI/CD automatizado',
-        'Implementou Infrastructure as Code reduzindo custos em 40%',
-        'Liderou migração para arquitetura de microserviços'
-      ]
+        'Cisco, HP, Huawei, Elsys, Fortinet, Ansible, Automação de rede',
+      ],
     },
     {
-      role: 'Cloud Infrastructure Specialist',
-      company: 'Digital Innovations Ltd',
-      period: '2020 - 2022',
-      description: 'Especialista em soluções cloud AWS e Azure, automação de processos e otimização de performance.',
+      role: 'Cloud Network Analyst',
+      company: 'Orbbi',
+      period: 'mai de 2024 - dez de 2024 · 8 meses',
+      location: 'João Pessoa, Paraíba, Brasil · Remota',
+      description: [
+        'Gestão e sustentação de ambientes em nuvem AWS.',
+        'Provisionamento de recursos com Terraform.',
+        'Suporte em EC2, VPC, Subnet, Route Table, NAT Gateway, Security Group, Network ACL, Internet Gateway.',
+        'Suporte para Linux (CentOS, Amazon Linux).',
+        'Configuração de iptables e segurança de rede.',
+        'Documentação de ambiente e processos.',
+        'Implementação e manutenção de túneis IPSEC (OpenSwan, StrongSwan).',
+        'Gerenciamento de servidores VPN com OpenVPN.'
+      ],
       achievements: [
-        'Projetou arquitetura cloud para aplicações de alta disponibilidade',
-        'Implementou monitoring e alerting que reduziu downtime em 85%',
-        'Automatizou provisioning de recursos com Terraform'
-      ]
+        'AWS, Terraform, Linux, GitLab, Fortigate Cloud-native',
+      ],
     },
     {
-      role: 'Systems Administrator',
-      company: 'Enterprise Systems Inc',
-      period: '2018 - 2020',
-      description: 'Administração de sistemas Linux, implementação de containers e versionamento de código.',
+      role: 'Information Security Analyst I',
+      company: 'Grupo Binário',
+      period: 'set de 2022 - abr de 2024 · 1 ano 8 meses',
+      location: 'São Paulo, Brasil · Remota',
+      description: [
+        'Atuação em SOC: detecção de incidentes e configuração de segurança.',
+        'Consultoria e implementação de regras em NGFW e Application Control.',
+        'Gestão de Fortimanager, Fortigate e Fortianalyzer.',
+        'Troubleshooting em Firewalls (Fortigate).',
+        'Criação e alteração de regras de QoS, Traffic Shapping, Webfilter e Appcontrol.',
+        'Suporte e implementação de VPN IPsec e SSL.',
+        'Suporte FSSO e redes SD-WAN.',
+        'Utilização do Control Desk IBM.'
+      ],
       achievements: [
-        'Containerizou aplicações legacy aumentando eficiência',
-        'Implementou backup automatizado e disaster recovery',
-        'Otimizou performance de servidores em 60%'
-      ]
-    }
+        'Fortigate, Fortimanager, Fortianalyzer',
+      ],
+    },
+    {
+      role: 'Information Security Analyst',
+      company: 'The Forense',
+      period: 'jan de 2022 - ago de 2022 · 8 meses',
+      location: 'Teresina, Piauí, Brasil · Presencial',
+      description: [
+        'Análise de vulnerabilidades (OpenVas e Nessus).',
+        'Perícia forense.',
+        'Gerenciamento da plataforma EAD (Moodle).'
+      ],
+      achievements: [
+        'OpenVas, Nessus e Perícia Forense',
+      ],
+    },
   ];
 
   return (
@@ -115,7 +160,7 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-primary">DevOps Portfolio</div>
+            <div className="text-2xl font-bold text-primary">Portifólio - Ionan Nery</div>
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'experience', 'projects', 'contact'].map((section) => (
                 <button
@@ -141,12 +186,10 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              DevOps & Cloud
-              <span className="text-primary block">Infrastructure</span>
+              Cloud Infrastructure and Security Analyst
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Especialista em automação, infraestrutura cloud e práticas DevOps modernas. 
-              Transformando ideias em soluções escaláveis e eficientes.
+              Infraestrutura na nuvem com foco em segurança cibernética. Integro práticas DevSecOps para entregar ambientes resilientes, seguros e prontos para escalar.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
@@ -185,49 +228,48 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-in">
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Sou um profissional apaixonado por tecnologia com foco em DevOps e infraestrutura cloud. 
-                  Com formação DevOps Pro e certificações relevantes, possuo expertise em automação, 
-                  containerização e arquitetura de soluções escaláveis.
+                  Sou Analista de Infraestrutura Cloud com experiência em ambientes Linux, redes e segurança. Atuo com automação via Terraform, conteinerização com Docker e orquestração com Kubernetes, além de aplicar práticas SRE para garantir escalabilidade e alta disponibilidade.
                 </p>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Minha missão é otimizar processos, reduzir custos operacionais e acelerar o time-to-market 
-                  através da implementação de práticas DevOps modernas e soluções cloud-native.
+                  Tenho vivência com Fortigate, XDR, SIEM, CI/CD, controle de acesso, análise de logs e resposta a incidentes. Busco aplicar as melhores práticas de DevOps e Cloud Security na construção de ambientes eficientes, seguros e resilientes.
                 </p>
                 <div className="flex space-x-4">
-                  <Button variant="outline" className="flex items-center gap-2">
-                    <Github size={20} />
-                    GitHub
+                  <Button variant="outline" className="flex items-center gap-2" asChild>
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github size={20} />
+                      GitHub
+                    </a>
                   </Button>
-                  <Button variant="outline" className="flex items-center gap-2">
-                    <Linkedin size={20} />
-                    LinkedIn
+                  <Button variant="outline" className="flex items-center gap-2" asChild>
+                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                      <Linkedin size={20} />
+                      LinkedIn
+                    </a>
                   </Button>
                 </div>
               </div>
               <div className="animate-fade-in">
                 <Card className="p-6 card-hover">
                   <h3 className="text-2xl font-semibold mb-4 text-primary">Competências Principais</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {skills.map((skill, index) => (
-                      <Badge key={index} variant="secondary" className="text-sm">
-                        {skill}
-                      </Badge>
-                    ))}
+                  <div className="mb-4">
+                    <div className="font-semibold mb-1">Certificações:</div>
+                    <ul className="list-disc list-inside text-muted-foreground text-sm mb-2">
+                      <li>AWS Cloud Practitioner</li>
+                      <li>Fortinet Certified Associate Cybersecurity</li>
+                    </ul>
                   </div>
-                  <div className="mt-6 space-y-3">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Zap size={16} className="text-primary" />
-                      <span>AWS Certified Solutions Architect</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Zap size={16} className="text-primary" />
-                      <span>Kubernetes Administrator (CKA)</span>
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Zap size={16} className="text-primary" />
-                      <span>DevOps Pro Certification</span>
-                    </div>
-                  </div>
+                  <div className="font-semibold mb-1">Principais Competências:</div>
+                  <ul className="list-disc list-inside text-muted-foreground text-sm">
+                    <li>Cloud: AWS (EC2, S3, RDS, EBS, VPC, ECS, EKS, CloudFront)</li>
+                    <li>Containers/Orquestração: Docker, Kubernetes</li>
+                    <li>CI/CD: GitLab, Github Actions</li>
+                    <li>Firewall: Fortigate, PfSense</li>
+                    <li>SIEM: Wazuh</li>
+                    <li>IaC: Terraform</li>
+                    <li>SO: Windows, Linux e MacOS</li>
+                    <li>Metodologias: Kanban e Scrum (Jira)</li>
+                    <li>Monitoramento: Zabbix, Grafana, CloudWatch</li>
+                  </ul>
                 </Card>
               </div>
             </div>
@@ -246,23 +288,30 @@ const Index = () => {
                   <div>
                     <h3 className="text-2xl font-semibold text-primary">{exp.role}</h3>
                     <p className="text-lg text-muted-foreground">{exp.company}</p>
+                    <p className="text-sm text-muted-foreground">{exp.location}</p>
                   </div>
                   <Badge variant="outline" className="mt-2 md:mt-0">
                     {exp.period}
                   </Badge>
                 </div>
-                <p className="text-muted-foreground mb-4 leading-relaxed">{exp.description}</p>
-                <div className="space-y-2">
-                  <h4 className="font-semibold text-sm uppercase tracking-wide">Principais Conquistas:</h4>
-                  <ul className="space-y-1">
-                    {exp.achievements.map((achievement, achIndex) => (
-                      <li key={achIndex} className="text-sm text-muted-foreground flex items-start gap-2">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                        {achievement}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="list-disc list-inside text-muted-foreground mb-4 leading-relaxed space-y-1">
+                  {Array.isArray(exp.description)
+                    ? exp.description.map((item, i) => <li key={i}>{item}</li>)
+                    : <li>{exp.description}</li>}
+                </ul>
+                {exp.achievements && exp.achievements.length > 0 && (
+                  <div className="space-y-2">
+                    <h4 className="font-semibold text-sm uppercase tracking-wide">Destaques:</h4>
+                    <ul className="space-y-1">
+                      {exp.achievements.map((achievement, achIndex) => (
+                        <li key={achIndex} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+                          {achievement}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </Card>
             ))}
           </div>
@@ -284,11 +333,6 @@ const Index = () => {
                         <Github size={16} />
                       </a>
                     </Button>
-                    <Button variant="ghost" size="sm" asChild>
-                      <a href={project.demo} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink size={16} />
-                      </a>
-                    </Button>
                   </div>
                 </div>
                 <p className="text-muted-foreground mb-4 leading-relaxed">{project.description}</p>
@@ -305,54 +349,96 @@ const Index = () => {
         </div>
       </section>
 
+      {/* LinkedIn Posts Section */}
+      <section id="linkedin-posts" className="py-20 bg-muted/10">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">Posts no LinkedIn</h2>
+          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="card-hover animate-fade-in">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7213195158677311488?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="VPC Peering"></iframe>
+            </div>
+            <div className="card-hover animate-fade-in">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7219325797830975488?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="App bia com terraform"></iframe>
+            </div>
+            <div className="card-hover animate-fade-in">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7310507162730991616?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="Explorando Kubernetes e Amazon EKS na prática!"></iframe>
+            </div>
+            <div className="card-hover animate-fade-in">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7217543716922662912?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="EC2 + S3 + SSM + terraform"></iframe>
+            </div>
+            <div className="card-hover animate-fade-in">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7320290677727150080?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="Certificação AWS"></iframe>
+            </div>
+            <div className="card-hover animate-fade-in">
+              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7211397405966016514?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="Trabalhando com Docker"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-muted/20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">Contato</h2>
           <div className="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
             <div className="animate-slide-in">
-              <h3 className="text-2xl font-semibold mb-6 text-primary">Vamos Conversar</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-primary">Vamos Conversar ?</h3>
               <p className="text-muted-foreground mb-8 leading-relaxed">
-                Interessado em colaborar ou discutir oportunidades? 
-                Estou sempre aberto a novos desafios e projetos interessantes.
+                Interessado em colaborar ou discutir oportunidades? Estou sempre aberto a novos desafios e projetos interessantes.
               </p>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
                   <Mail size={20} className="text-primary" />
-                  <span>contato@devopsportfolio.com</span>
+                  <span>ionannery@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <Phone size={20} className="text-primary" />
-                  <span>+55 (11) 99999-9999</span>
+                  <span>+55 (86) 99824-4141</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <MapPin size={20} className="text-primary" />
-                  <span>São Paulo, Brasil</span>
+                  <span>Teresina, Piauí</span>
                 </div>
               </div>
             </div>
             <Card className="p-6 animate-fade-in">
-              <form className="space-y-6">
+              <form className="space-y-6" onSubmit={async (e) => {
+                e.preventDefault();
+                const form = e.target as HTMLFormElement;
+                const data = {
+                  nome: form.nome.value,
+                  email: form.email.value,
+                  assunto: form.assunto.value,
+                  mensagem: form.mensagem.value,
+                };
+                await fetch('https://formsubmit.co/ajax/ionannery@gmail.com', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                  },
+                  body: JSON.stringify(data),
+                });
+                alert('Mensagem enviada com sucesso!');
+                form.reset();
+              }}>
                 <div>
                   <label className="block text-sm font-medium mb-2">Nome</label>
-                  <Input placeholder="Seu nome completo" />
+                  <Input name="nome" placeholder="Seu nome completo" required />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Email</label>
-                  <Input type="email" placeholder="seu@email.com" />
+                  <Input name="email" type="email" placeholder="seu@email.com" required />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Assunto</label>
-                  <Input placeholder="Assunto da mensagem" />
+                  <Input name="assunto" placeholder="Assunto da mensagem" required />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Mensagem</label>
-                  <Textarea 
-                    placeholder="Sua mensagem aqui..." 
-                    className="min-h-[120px]"
-                  />
+                  <Textarea name="mensagem" placeholder="Sua mensagem aqui..." className="min-h-[120px]" required />
                 </div>
-                <Button className="w-full">
+                <Button className="w-full" type="submit">
                   Enviar Mensagem
                 </Button>
               </form>
@@ -366,14 +452,18 @@ const Index = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-muted-foreground text-sm">
-              © 2024 DevOps Portfolio. Todos os direitos reservados.
+              © 2025 Portfólio Ionan Nery. Todos os direitos reservados.
             </p>
             <div className="flex space-x-4 mt-4 md:mt-0">
-              <Button variant="ghost" size="sm">
-                <Github size={16} />
+              <Button variant="ghost" size="sm" asChild>
+                <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                  <Github size={16} />
+                </a>
               </Button>
-              <Button variant="ghost" size="sm">
-                <Linkedin size={16} />
+              <Button variant="ghost" size="sm" asChild>
+                <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                  <Linkedin size={16} />
+                </a>
               </Button>
             </div>
           </div>

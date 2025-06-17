@@ -1,73 +1,88 @@
-# Welcome to your Lovable project
+# Portfólio | Ionan Nery
 
-## Project info
+Bem-vindo ao meu portfólio profissional! Este projeto foi desenvolvido para apresentar minhas experiências, competências, certificações, projetos e publicações na área de Cloud, Segurança e DevOps, com foco em infraestrutura moderna, automação e práticas de mercado.
 
-**URL**: https://lovable.dev/projects/59960ffb-3ce5-4722-bff1-a5122b06242d
+## 🚀 Tecnologias Utilizadas
 
-## How can I edit this code?
+- **React** (com TypeScript) — SPA moderna, componentizada e performática
+- **Vite** — Build tool ultrarrápida para desenvolvimento e produção
+- **Tailwind CSS** — Estilização moderna, responsiva e com design customizado
+- **Shadcn/UI** — Componentes UI acessíveis e prontos para produção
+- **Radix UI** — Componentes acessíveis e semânticos
+- **Lucide Icons** — Ícones modernos e personalizáveis
+- **ESLint + Typescript ESLint** — Padronização e qualidade de código
+- **PostCSS + Autoprefixer** — Compatibilidade de estilos cross-browser
 
-There are several ways of editing your application.
+## 💡 Funcionalidades
 
-**Use Lovable**
+- **Página inicial** com apresentação profissional e navegação fluida
+- **Sobre Mim**: resumo da trajetória, áreas de atuação e certificações
+- **Competências**: principais skills técnicas e metodologias
+- **Experiência Profissional**: timeline detalhada, tópicos e destaques
+- **Projetos**: lista de projetos reais, com links diretos para o GitHub
+- **Posts do LinkedIn**: pré-visualização de publicações técnicas relevantes
+- **Contato**: formulário funcional para envio de mensagens por e-mail
+- **Responsivo**: layout adaptado para desktop, tablet e mobile
+- **SEO e Social**: meta tags otimizadas para compartilhamento em redes sociais
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/59960ffb-3ce5-4722-bff1-a5122b06242d) and start prompting.
+## 📂 Estrutura de Pastas
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+```
+infra-portfolio-pulse/
+├── public/                # Arquivos estáticos (favicon, imagens, robots.txt)
+├── src/
+│   ├── components/        # Componentes reutilizáveis (UI)
+│   ├── hooks/             # Custom hooks
+│   ├── lib/               # Funções utilitárias
+│   ├── pages/             # Páginas principais (Index, NotFound)
+│   ├── App.tsx            # Componente raiz
+│   └── main.tsx           # Ponto de entrada React
+├── index.html             # HTML principal, meta tags e root
+├── tailwind.config.ts     # Configuração do Tailwind
+├── postcss.config.js      # Configuração do PostCSS
+├── vite.config.ts         # Configuração do Vite
+├── tsconfig*.json         # Configurações do TypeScript
+├── .gitignore             # Arquivos ignorados pelo Git
+└── README.md              # Este arquivo
 ```
 
-**Edit a file directly in GitHub**
+## 🛠️ Como rodar o projeto localmente
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/ionannery/infra-portfolio-pulse.git
+   cd infra-portfolio-pulse
+   ```
+2. **Instale as dependências:**
+   ```bash
+   npm install
+   ```
+3. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+   ```
+4. **Acesse no navegador:**
+   [http://localhost:8080](http://localhost:8080)
 
-**Use GitHub Codespaces**
+## 🌐 Deploy
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+O projeto pode ser facilmente publicado no Vercel, Netlify, GitHub Pages ou qualquer serviço de hospedagem estática.
 
-## What technologies are used for this project?
+## 📸 Imagem de destaque para redes sociais
 
-This project is built with:
+A imagem `Portifólio-Ionan-Nery.png` está configurada nas meta tags para garantir uma prévia profissional ao compartilhar o link do portfólio.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 👨‍💻 Autor
 
-## How can I deploy this project?
+Desenvolvido por **Ionan Nery**
+- [LinkedIn](https://www.linkedin.com/in/ionan-nery/)
+- [GitHub](https://github.com/ionannery)
+- Email: ionannery@gmail.com
 
-Simply open [Lovable](https://lovable.dev/projects/59960ffb-3ce5-4722-bff1-a5122b06242d) and click on Share -> Publish.
+## 📝 Licença
 
-## Can I connect a custom domain to my Lovable project?
+Este projeto é de uso pessoal e portfólio. Sinta-se à vontade para se inspirar, mas não copie para fins comerciais sem autorização.
 
-Yes, you can!
+---
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+> "A tecnologia é o que nos conecta ao futuro."
