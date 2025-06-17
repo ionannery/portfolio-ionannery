@@ -12,6 +12,7 @@ Bem-vindo ao meu portfólio profissional! Este projeto foi desenvolvido para apr
 - **Lucide Icons** — Ícones modernos e personalizáveis
 - **ESLint + Typescript ESLint** — Padronização e qualidade de código
 - **PostCSS + Autoprefixer** — Compatibilidade de estilos cross-browser
+- **gh-pages** — Deploy automatizado para o GitHub Pages
 
 ## 💡 Funcionalidades
 
@@ -43,6 +44,7 @@ infra-portfolio-pulse/
 ├── vite.config.ts         # Configuração do Vite
 ├── tsconfig*.json         # Configurações do TypeScript
 ├── .gitignore             # Arquivos ignorados pelo Git
+├── .nojekyll              # Garante funcionamento correto no GitHub Pages
 └── README.md              # Este arquivo
 ```
 
@@ -50,8 +52,8 @@ infra-portfolio-pulse/
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/ionannery/infra-portfolio-pulse.git
-   cd infra-portfolio-pulse
+   git clone https://github.com/ionannery/portifolio-ionannery.git
+   cd portifolio-ionannery
    ```
 2. **Instale as dependências:**
    ```bash
@@ -64,13 +66,23 @@ infra-portfolio-pulse/
 4. **Acesse no navegador:**
    [http://localhost:8080](http://localhost:8080)
 
-## 🌐 Deploy
+## 🌐 Deploy no GitHub Pages
 
-O projeto pode ser facilmente publicado no Vercel, Netlify, GitHub Pages ou qualquer serviço de hospedagem estática.
+O deploy é automatizado usando o pacote `gh-pages`.
 
-## 📸 Imagem de destaque para redes sociais
-
-A imagem `Portifólio-Ionan-Nery.png` está configurada nas meta tags para garantir uma prévia profissional ao compartilhar o link do portfólio.
+### Passo a passo:
+1. **Ajuste o caminho base no `vite.config.ts`:**
+   ```js
+   base: '/portifolio-ionannery/'
+   ```
+2. **Build do projeto:**
+   ```bash
+   npm run build
+   ```
+3. **Deploy:**
+   ```bash
+   npm run deploy
+   ```
 
 ## 👨‍💻 Autor
 
