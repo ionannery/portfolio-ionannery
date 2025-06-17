@@ -52,8 +52,8 @@ infra-portfolio-pulse/
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/ionannery/portifolio-ionannery.git
-   cd portifolio-ionannery
+   git clone https://github.com/ionannery/portfolio-ionannery.git
+   cd portfolio-ionannery
    ```
 2. **Instale as dependências:**
    ```bash
@@ -73,7 +73,7 @@ O deploy é automatizado usando o pacote `gh-pages`.
 ### Passo a passo:
 1. **Ajuste o caminho base no `vite.config.ts`:**
    ```js
-   base: '/portifolio-ionannery/'
+   base: '/portfolio-ionannery/'
    ```
 2. **Build do projeto:**
    ```bash
