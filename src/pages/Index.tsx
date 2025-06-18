@@ -4,16 +4,22 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail, Phone, MapPin, Server, Cloud, Database, Monitor} from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, Server, Cloud, Database, Monitor, Sun, Moon } from 'lucide-react';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
+  const [theme, setTheme] = useState('dark');
+
+  useEffect(() => {
+    document.documentElement.classList.remove('light');
+    document.documentElement.classList.add('dark');
+    setTheme('dark');
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
       const sections = ['home', 'about', 'experience', 'projects', 'contact'];
       const scrollY = window.scrollY;
-      
       sections.forEach((section) => {
         const element = document.getElementById(section);
         if (element) {
@@ -24,7 +30,6 @@ const Index = () => {
         }
       });
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -32,10 +37,21 @@ const Index = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   };
 
+  const toggleTheme = () => {
+    if (theme === 'dark') {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.classList.add('light');
+      setTheme('light');
+    } else {
+      document.documentElement.classList.remove('light');
+      document.documentElement.classList.add('dark');
+      setTheme('dark');
+    }
+  };
 
   const githubUrl = "https://github.com/ionannery";
   const linkedinUrl = "https://www.linkedin.com/in/ionan-nery/";
@@ -160,7 +176,6 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-sm border-b border-border">
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold text-primary">Portifólio - Ionan Nery</div>
             <div className="hidden md:flex space-x-8">
               {['home', 'about', 'experience', 'projects', 'contact'].map((section) => (
                 <button
@@ -176,6 +191,16 @@ const Index = () => {
                    section === 'projects' ? 'Projetos' : 'Contato'}
                 </button>
               ))}
+            </div>
+            <div className="flex items-center space-x-4">
+              {/* Botão de alternância de tema */}
+              <button
+                onClick={toggleTheme}
+                className="p-2 rounded-full hover:bg-muted transition-colors focus:outline-none"
+                aria-label="Alternar tema"
+              >
+                {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
+              </button>
             </div>
           </div>
         </div>
