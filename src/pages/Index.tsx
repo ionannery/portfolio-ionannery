@@ -97,9 +97,27 @@ const Index = () => {
 
   const experiences = [
     {
+      role: 'Analista de Segurança da Informação (Pleno)',
+      company: 'ready.ti',
+      period: 'jun de 2025 - o momento · 2 meses',
+      location: 'Teresina, Piauí, Brasil · Presencial',
+      description: [
+        'Atuação no time de Blue Team em ambiente de SOC, com foco em detecção, análise e resposta a incidentes de segurança cibernética.',
+        'Administração de NGFW FortiGate (configuração, controle de web filter e app control, troubleshooting).',
+        'Integração, análise avançada de logs e gestão centralizada com FortiAnalyzer e FortiManager.',
+        'Implementação de VPNs (IPSec e SSL).',
+        'Apoio em redes SD-WAN e melhorias contínuas de segurança.',
+        'Alteração, criação e remoção de regras Webfilter, AppControl, QoS.',
+        'Monitoramento de segurança com Wazuh e proteção de endpoints com SentinelOne.'
+      ],
+      achievements: [
+        'Fortigate, Fortimanager, Fortianalyzer, Blue Team, SD-WAN, XDR/EDR, SIEM, Wazuh, SentinelOne'
+      ],
+    },
+    {
       role: 'Network Support Analyst',
       company: 'Mamtech Tecnologia',
-      period: 'fev de 2025 - o momento · 5 meses',
+      period: 'fev de 2025 - jun de 2025 · 5 meses',
       location: 'Teresina, Piauí, Brasil · Presencial',
       description: [
         'Atendimento de chamados via STC e SGFT, solucionando problemas de rede.',
@@ -211,10 +229,10 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Cloud Infrastructure and Security Analyst
+              Information Security Analyst
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Infraestrutura na nuvem com foco em segurança cibernética. Integro práticas DevSecOps para entregar ambientes resilientes, seguros e prontos para escalar.
+              Analista de segurança da Informação (Blue Team), com experiência em SOC, detecção e resposta a incidentes, administração de NGFW FortiGate e gestão centralizada com FortiAnalyzer/FortiManager.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
@@ -253,10 +271,10 @@ const Index = () => {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-in">
                 <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                  Sou Analista de Infraestrutura Cloud com experiência em ambientes Linux, redes e segurança. Atuo com automação via Terraform, conteinerização com Docker e orquestração com Kubernetes, além de aplicar práticas SRE para garantir escalabilidade e alta disponibilidade.
+                Profissional com foco em Segurança Cibernética, atuando em Blue Team. Experiência em monitoramento ativo, análise de ameaças, detecção e resposta a incidentes, defesa de perímetro, investigação e gerenciamento de vulnerabilidades.
                 </p>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Tenho vivência com Fortigate, XDR, SIEM, CI/CD, controle de acesso, análise de logs e resposta a incidentes. Busco aplicar as melhores práticas de DevOps e Cloud Security na construção de ambientes eficientes, seguros e resilientes.
+                  Tenho vivência em ambiente de SOC, comprometido com a entrega de soluções seguras e eficazes para a proteção dos ativos da organização.
                 </p>
                 <div className="flex space-x-4">
                   <Button variant="outline" className="flex items-center gap-2" asChild>
@@ -285,14 +303,10 @@ const Index = () => {
                   </div>
                   <div className="font-semibold mb-1">Principais Competências:</div>
                   <ul className="list-disc list-inside text-muted-foreground text-sm">
-                    <li>Cloud: AWS (EC2, S3, RDS, EBS, VPC, ECS, EKS, CloudFront)</li>
-                    <li>Containers/Orquestração: Docker, Kubernetes</li>
-                    <li>CI/CD: GitLab, Github Actions</li>
-                    <li>Firewall: Fortigate, PfSense</li>
-                    <li>SIEM: Wazuh</li>
-                    <li>IaC: Terraform</li>
-                    <li>SO: Windows, Linux e MacOS</li>
-                    <li>Metodologias: Kanban e Scrum (Jira)</li>
+                    <li>Cloud: AWS</li>
+                    <li>Segurança: Firewalls (Fortigate, PfSense), SIEM (Wazuh, Splunk) XDR (SentinelOne), AWS Shield, Amazon GuardDuty, AWS CloudTrail, Amazon Inspector</li>
+                    <li>Sistemas Operacionais: Windows, Linux, MacOS</li>
+                    <li>Metodologias: Kanban, Scrum (Jira)</li>
                     <li>Monitoramento: Zabbix, Grafana, CloudWatch</li>
                   </ul>
                 </Card>
@@ -370,33 +384,6 @@ const Index = () => {
                 </div>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* LinkedIn Posts Section */}
-      <section id="linkedin-posts" className="py-20 bg-muted/10">
-        <div className="container mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">Posts no LinkedIn</h2>
-          <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-            <div className="card-hover animate-fade-in">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7213195158677311488?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="VPC Peering"></iframe>
-            </div>
-            <div className="card-hover animate-fade-in">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7219325797830975488?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="App bia com terraform"></iframe>
-            </div>
-            <div className="card-hover animate-fade-in">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7310507162730991616?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="Explorando Kubernetes e Amazon EKS na prática!"></iframe>
-            </div>
-            <div className="card-hover animate-fade-in">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7217543716922662912?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="EC2 + S3 + SSM + terraform"></iframe>
-            </div>
-            <div className="card-hover animate-fade-in">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7320290677727150080?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="Certificação AWS"></iframe>
-            </div>
-            <div className="card-hover animate-fade-in">
-              <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7211397405966016514?collapsed=1" height="400" width="100%" frameBorder="0" allowFullScreen title="Trabalhando com Docker"></iframe>
-            </div>
           </div>
         </div>
       </section>
