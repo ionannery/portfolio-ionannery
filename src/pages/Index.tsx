@@ -97,21 +97,26 @@ const Index = () => {
 
   const experiences = [
     {
-      role: 'Analista de Segurança da Informação (Pleno)',
-      company: 'ready.ti',
+      role: 'Cyber Security Analyst - Blue Team',
+      company: 'Ready.ti',
       period: 'jun de 2025 - o momento · 2 meses',
       location: 'Teresina, Piauí, Brasil · Presencial',
       description: [
-        'Atuação no time de Blue Team em ambiente de SOC, com foco em detecção, análise e resposta a incidentes de segurança cibernética.',
-        'Administração de NGFW FortiGate (configuração, controle de web filter e app control, troubleshooting).',
-        'Integração, análise avançada de logs e gestão centralizada com FortiAnalyzer e FortiManager.',
-        'Implementação de VPNs (IPSec e SSL).',
+        'Atuação no time de Blue Team em ambiente de SOC, com foco em detecção, análise e resposta a incidentes de segurança cibernética. Sólida experiência em administração de NGFW FortiGate (configuração, controle de web filter e app control, troubleshooting, além de integração, análise avançada de logs e gestão centralizada através das soluções FortiAnalyzer e FortiManager.',
+        ' ',
+        'Administração de NGFW (Fortigate).',
+        'Implementação túneis VPN (IPSec e SSL).',
+        'Roteamento dinâmico (BGP).',
         'Apoio em redes SD-WAN e melhorias contínuas de segurança.',
-        'Alteração, criação e remoção de regras Webfilter, AppControl, QoS.',
-        'Monitoramento de segurança com Wazuh e proteção de endpoints com SentinelOne.'
+        'Alteração/Criação e Administração de regras de firewall.',
+        'Criação de regras de QoS/Traffic Shapping',
+        'Configurações de perfis de Webfilter, AppControl.',
+        'Gerenciamento centralizado via FortiManager.',
+        'Análise avançada de logs e geração de relatórios com FortiAnalyzer.',
+        'Experiência com SIEM Securonix e proteção de endpoints com SentinelOne.'
       ],
       achievements: [
-        'Fortigate, Fortimanager, Fortianalyzer, Blue Team, SD-WAN, XDR/EDR, SIEM, Wazuh, SentinelOne'
+        'Fortigate, Fortimanager, Fortianalyzer, Blue Team, SD-WAN, EDR/XDR , SIEM, Wazuh, Securonix, SentinelOne'
       ],
     },
     {
@@ -154,7 +159,7 @@ const Index = () => {
       ],
     },
     {
-      role: 'Information Security Analyst I',
+      role: 'Information Security Analyst',
       company: 'Grupo Binário',
       period: 'set de 2022 - abr de 2024 · 1 ano 8 meses',
       location: 'São Paulo, Brasil · Remota',
@@ -169,7 +174,7 @@ const Index = () => {
         'Utilização do Control Desk IBM.'
       ],
       achievements: [
-        'Fortigate, Fortimanager, Fortianalyzer',
+        'Fortigate, Fortimanager, Fortianalyzer'
       ],
     },
     {
@@ -178,12 +183,12 @@ const Index = () => {
       period: 'jan de 2022 - ago de 2022 · 8 meses',
       location: 'Teresina, Piauí, Brasil · Presencial',
       description: [
+        'Estágio em Segurança da Informação focado em análise de vulnerabilidades e perícia forense.',
         'Análise de vulnerabilidades (OpenVas e Nessus).',
-        'Perícia forense.',
         'Gerenciamento da plataforma EAD (Moodle).'
       ],
       achievements: [
-        'OpenVas, Nessus e Perícia Forense',
+        'OpenVas, Nessus, Moodle, Perícia Forense',
       ],
     },
   ];
@@ -229,7 +234,7 @@ const Index = () => {
         <div className="container mx-auto px-6 text-center">
           <div className="animate-fade-in">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Information Security Analyst
+              Cyber Security Analyst
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Analista de segurança da Informação (Blue Team), com experiência em SOC, detecção e resposta a incidentes, administração de NGFW FortiGate e gestão centralizada com FortiAnalyzer/FortiManager.
@@ -303,11 +308,15 @@ const Index = () => {
                   </div>
                   <div className="font-semibold mb-1">Principais Competências:</div>
                   <ul className="list-disc list-inside text-muted-foreground text-sm">
-                    <li>Cloud: AWS</li>
-                    <li>Segurança: Firewalls (Fortigate, PfSense), SIEM (Wazuh, Splunk) XDR (SentinelOne), AWS Shield, Amazon GuardDuty, AWS CloudTrail, Amazon Inspector</li>
-                    <li>Sistemas Operacionais: Windows, Linux, MacOS</li>
-                    <li>Metodologias: Kanban, Scrum (Jira)</li>
-                    <li>Monitoramento: Zabbix, Grafana, CloudWatch</li>
+                    <li><strong>Firewalls</strong> - Fortigate, PfSense</li>
+                    <li><strong>SIEM</strong> - Wazuh, Securonix</li>
+                    <li><strong>EDR/XDR</strong> - SentinelOne</li>
+                    <li><strong>Vulnerability Management</strong> - Openvas, Nessus</li>
+                    <li><strong>Frameworks e Metodologias</strong> - NIST, Cyber Kill Chain, MITRE ATT&CK</li>
+                    <li><strong>Cloud Security</strong> - AWS Shield, Amazon GuardDuty, Amazon Inspector</li>
+                    <li><strong>Sistemas Operacionais</strong> - Windows, Linux, MacOS</li>
+                    <li><strong>Metodologias</strong> - Kanban, Scrum (Jira)</li>
+                    <li><strong>Monitoramento</strong> - Zabbix, Grafana, CloudWatch</li>
                   </ul>
                 </Card>
               </div>

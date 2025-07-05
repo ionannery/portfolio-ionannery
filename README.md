@@ -1,6 +1,8 @@
 # Portfólio | Ionan Nery
 
-Bem-vindo ao meu portfólio profissional! Este projeto apresenta minhas experiências, competências, certificações e projetos com ênfase em Segurança da Informação, Blue Team, SOC, infraestrutura de redes, automação e defesa cibernética. Aqui você encontra minha trajetória profissional, principais conquistas, habilidades técnicas e projetos práticos desenvolvidos na área de tecnologia e segurança.
+Bem-vindo ao meu portfólio profissional! 
+
+Este projeto foi desenvolvido para apresentar minhas experiências, competências, certificações, projetos e publicações na área de Cloud, Segurança e DevOps, com foco em infraestrutura moderna, automação e práticas de mercado.
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -19,9 +21,3 @@ Desenvolvido por **Ionan Nery**
 - [LinkedIn](https://www.linkedin.com/in/ionan-nery/)
 - [GitHub](https://github.com/ionannery)
 - Email: ionannery@gmail.com
-
-## 📝 Licença
-
-Este projeto é de uso pessoal e portfólio. Sinta-se à vontade para se inspirar, mas não copie para fins comerciais sem autorização.
-
----
