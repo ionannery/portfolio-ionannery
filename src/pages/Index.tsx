@@ -102,18 +102,11 @@ const Index = () => {
       period: 'jun de 2025 - o momento · 2 meses',
       location: 'Teresina, Piauí, Brasil · Presencial',
       description: [
-        'Atuação no time de Blue Team em ambiente de SOC, com foco em detecção, análise e resposta a incidentes de segurança cibernética. Sólida experiência em administração de NGFW FortiGate (configuração, controle de web filter e app control, troubleshooting, além de integração, análise avançada de logs e gestão centralizada através das soluções FortiAnalyzer e FortiManager.',
-        ' ',
-        'Administração de NGFW (Fortigate).',
-        'Implementação túneis VPN (IPSec e SSL).',
-        'Roteamento dinâmico (BGP).',
-        'Apoio em redes SD-WAN e melhorias contínuas de segurança.',
-        'Alteração/Criação e Administração de regras de firewall.',
-        'Criação de regras de QoS/Traffic Shapping',
-        'Configurações de perfis de Webfilter, AppControl.',
-        'Gerenciamento centralizado via FortiManager.',
-        'Análise avançada de logs e geração de relatórios com FortiAnalyzer.',
-        'Experiência com SIEM Securonix e proteção de endpoints com SentinelOne.'
+        'Análise aprofundada de alertas e incidentes no SIEM Securonix, incluindo investigação de correlações, enriquecimento de dados e determinação de verdadeiro/falso positivo.',
+        'Resposta a incidentes com o SentinelOne, conduzindo análises de comportamento, verificação de IOC/IOA, isolamento de endpoints e orientação para contenção.',
+        'Responsável pela criação e manutenção de playbooks, tanto operacionais para o N1, padronizando triagem e escalonamento, quanto playbooks de automação para o SOAR do Securonix, incluindo enriquecimento de IOCs, bloqueio de IP\'s notificações e ações de resposta.',
+        'Participação na otimização contínua das regras do SIEM, criando casos de uso, ajustando correlações e reduzindo falsos positivos para aumentar a eficácia da detecção.',
+        'Administração de firewalls Fortigate, além do gerenciamento e operação das plataformas FortiManager, FortiAnalyzer e FortiAuthenticator.'
       ],
       achievements: [
         'Fortigate, Fortimanager, Fortianalyzer, Blue Team, SD-WAN, EDR/XDR , SIEM, Wazuh, Securonix, SentinelOne'
