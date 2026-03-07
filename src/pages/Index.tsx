@@ -303,7 +303,7 @@ const Index = () => {
                   <ul className="list-disc list-inside text-muted-foreground text-sm">
                     <li><strong>Firewalls</strong> - Fortigate, PfSense</li>
                     <li><strong>SIEM</strong> - Wazuh, Securonix</li>
-                    <li><strong>EDR/XDR</strong> - SentinelOne</li>
+                    <li><strong>EDR/XDR</strong> - SentinelOne, CrowdStrike</li>
                     <li><strong>Vulnerability Management</strong> - Openvas, Nessus</li>
                     <li><strong>Frameworks e Metodologias</strong> - NIST, Cyber Kill Chain, MITRE ATT&CK</li>
                     <li><strong>Cloud Security</strong> - AWS Shield, Amazon GuardDuty, Amazon Inspector</li>
