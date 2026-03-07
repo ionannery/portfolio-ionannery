@@ -70,10 +70,10 @@ const Index = () => {
       github: 'https://github.com/ionannery/iac-alura',
     },
     {
-      title: 'project-pixels-art',
-      description: 'Aplicação web para criar e colorir desenhos em um quadro de pixels. Desenvolvido com JavaScript, HTML e CSS.',
-      technologies: ['JavaScript', 'HTML', 'CSS'],
-      github: 'https://github.com/ionannery/project-pixels-art',
+      title: 'IOC Nexus',
+      description: 'Plataforma de verificação e consulta de Indicadores de Comprometimento (IOCs) em múltiplas fontes de inteligência de ameaças globais. Permite análise rápida de IPs, hashes, domínios e URLs para identificação de atividades maliciosas.',
+      technologies: ['Cybersecurity', 'Threat Intelligence', 'IOC Analysis'],
+      github: 'https://iocnexus.lovable.app/',
     },
     {
       title: 'bia',
