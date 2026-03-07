@@ -109,7 +109,7 @@ const Index = () => {
         'Administração de firewalls Fortigate, além do gerenciamento e operação das plataformas FortiManager, FortiAnalyzer e FortiAuthenticator.'
       ],
       achievements: [
-        'Fortigate, Fortimanager, Fortianalyzer, SD-WAN, EDR/XDR, SIEM, Wazuh, Securonix, SentinelOne, CrowdStrike'
+        'Fortigate, Fortimanager, Fortianalyzer, Blue Team, SD-WAN, EDR/XDR, SIEM, Wazuh, Securonix, SentinelOne, CrowdStrike'
       ],
     },
     {
