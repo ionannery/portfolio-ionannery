@@ -268,11 +268,14 @@ const Index = () => {
             <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">Sobre Mim</h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-in">
-                <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                Profissional com foco em Segurança Cibernética, atuando em Blue Team. Experiência em monitoramento ativo, análise de ameaças, detecção e resposta a incidentes, defesa de perímetro, investigação e gerenciamento de vulnerabilidades.
+                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                  Analista de Segurança Cibernética com atuação em Blue Team e operações de SOC, focado em monitoramento ativo, triagem de alertas, análise e resposta a incidentes e defesa de perímetro. Atuo diretamente no suporte a clientes do setor público, investigando alertas em ambientes reais de produção com ferramentas de SIEM, EDR/XDR e NGFW.
+                </p>
+                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
+                  No dia a dia, trabalho com determinação de verdadeiros e falsos positivos, análise de logs de firewall, investigação de ameaças e documentação técnica de incidentes. Tenho experiência prática com detecção de exploração de CVEs, técnicas de persistência, movimentação lateral e campanhas de phishing avançadas.
                 </p>
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Tenho vivência em ambiente de SOC, comprometido com a entrega de soluções seguras e eficazes para a proteção dos ativos da organização.
+                  Graduado em Sistemas de Informação e em constante evolução na área, desenvolvendo também soluções voltadas à automação de threat intelligence e geração de relatórios de segurança.
                 </p>
                 <div className="flex space-x-4">
                   <Button variant="outline" className="flex items-center gap-2" asChild>
@@ -301,15 +304,15 @@ const Index = () => {
                   </div>
                   <div className="font-semibold mb-1">Principais Competências:</div>
                   <ul className="list-disc list-inside text-muted-foreground text-sm">
-                    <li><strong>Firewalls</strong> - Fortigate, PfSense</li>
-                    <li><strong>SIEM</strong> - Wazuh, Securonix</li>
-                    <li><strong>EDR/XDR</strong> - SentinelOne, CrowdStrike</li>
-                    <li><strong>Vulnerability Management</strong> - Openvas, Nessus</li>
-                    <li><strong>Frameworks e Metodologias</strong> - NIST, Cyber Kill Chain, MITRE ATT&CK</li>
+                    <li><strong>Firewalls</strong> - FortiGate, Palo Alto (PA-5220 / Panorama)</li>
+                    <li><strong>SIEM</strong> - Elastic, Wazuh, Securonix</li>
+                    <li><strong>EDR/XDR</strong> - Cortex XDR (Palo Alto), CrowdStrike Falcon, SentinelOne</li>
+                    <li><strong>Vulnerability Management</strong> - OpenVAS, Qualys</li>
+                    <li><strong>Scripting</strong> - Python, Bash, PowerShell</li>
+                    <li><strong>Frameworks e Metodologias</strong> - MITRE ATT&CK, Cyber Kill Chain, NIST</li>
                     <li><strong>Cloud Security</strong> - AWS Shield, Amazon GuardDuty, Amazon Inspector</li>
-                    <li><strong>Sistemas Operacionais</strong> - Windows, Linux, MacOS</li>
-                    <li><strong>Metodologias</strong> - Kanban, Scrum (Jira)</li>
-                    <li><strong>Monitoramento</strong> - Zabbix, Grafana, CloudWatch</li>
+                    <li><strong>Sistemas Operacionais</strong> - Windows, Linux, macOS</li>
+                    <li><strong>Metodologias Ágeis</strong> - Kanban, Scrum (Jira)</li>
                   </ul>
                 </Card>
               </div>
