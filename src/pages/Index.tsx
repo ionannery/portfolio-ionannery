@@ -230,7 +230,7 @@ const Index = () => {
               Cyber Security Analyst
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Analista de segurança da Informação (Blue Team), com experiência em SOC, detecção e resposta a incidentes, administração de NGFW FortiGate e gestão centralizada com FortiAnalyzer/FortiManager.
+              Analista de Segurança Cibernética com atuação em Blue Team e operações de SOC, focado em monitoramento ativo, triagem de alertas, análise e resposta a incidentes e defesa de perímetro. Atuo diretamente no suporte a clientes do setor público com ferramentas de SIEM, EDR/XDR e NGFW.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button 
