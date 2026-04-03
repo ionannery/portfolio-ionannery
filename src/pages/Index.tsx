@@ -277,7 +277,33 @@ const Index = () => {
                 <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                   Graduado em Sistemas de Informação e em constante evolução na área, desenvolvendo também soluções voltadas à automação de threat intelligence e geração de relatórios de segurança.
                 </p>
-...
+                <div className="flex space-x-4">
+                  <Button variant="outline" className="flex items-center gap-2" asChild>
+                    <a href={githubUrl} target="_blank" rel="noopener noreferrer">
+                      <Github size={20} />
+                      GitHub
+                    </a>
+                  </Button>
+                  <Button variant="outline" className="flex items-center gap-2" asChild>
+                    <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
+                      <Linkedin size={20} />
+                      LinkedIn
+                    </a>
+                  </Button>
+                </div>
+              </div>
+              <div className="animate-fade-in">
+                <Card className="p-6 card-hover">
+                  <h3 className="text-2xl font-semibold mb-4 text-primary">Competências Principais</h3>
+                  <div className="mb-4">
+                    <div className="font-semibold mb-1">Certificações:</div>
+                    <ul className="list-disc list-inside text-muted-foreground text-sm mb-2">
+                      <li>AWS Cloud Practitioner</li>
+                      <li>Fortinet Certified Associate Cybersecurity</li>
+                    </ul>
+                  </div>
+                  <div className="font-semibold mb-1">Principais Competências:</div>
+                  <ul className="list-disc list-inside text-muted-foreground text-sm">
                     <li><strong>Firewalls</strong> - FortiGate, Palo Alto (PA-5220 / Panorama)</li>
                     <li><strong>SIEM</strong> - Elastic, Wazuh, Securonix</li>
                     <li><strong>EDR/XDR</strong> - Cortex XDR (Palo Alto), CrowdStrike Falcon, SentinelOne</li>
