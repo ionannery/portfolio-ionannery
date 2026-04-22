@@ -225,8 +225,6 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center gradient-bg">
       {/* Hero Section - 2 columns */}
       <section id="home" className="min-h-screen flex items-center pt-24 pb-16 gradient-bg">
         <div className="container mx-auto px-6">
