@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail, Phone, MapPin, Server, Cloud, Database, Monitor, Sun, Moon } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, Server, Cloud, Database, Monitor, Sun, Moon, Shield, Siren, ScanSearch, Code2, BookOpen, CloudCog, MonitorCog, KanbanSquare, Award } from 'lucide-react';
+import certCcdl2 from '@/assets/cert-ccdl2.png';
+import certAwsCp from '@/assets/cert-aws-cp.png';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -18,7 +20,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'projects', 'contact'];
+      const sections = ['home', 'about', 'certifications', 'experience', 'projects', 'contact'];
       const scrollY = window.scrollY;
       sections.forEach((section) => {
         const element = document.getElementById(section);
@@ -193,7 +195,7 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'experience', 'projects', 'contact'].map((section) => (
+              {['home', 'about', 'certifications', 'experience', 'projects', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -203,6 +205,7 @@ const Index = () => {
                 >
                   {section === 'home' ? 'Início' : 
                    section === 'about' ? 'Sobre Mim' :
+                   section === 'certifications' ? 'Certificações' :
                    section === 'experience' ? 'Experiência' :
                    section === 'projects' ? 'Projetos' : 'Contato'}
                 </button>
