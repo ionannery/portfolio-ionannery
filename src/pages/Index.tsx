@@ -4,7 +4,9 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Github, Linkedin, Mail, Phone, MapPin, Server, Cloud, Database, Monitor, Sun, Moon } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MapPin, Server, Cloud, Database, Monitor, Sun, Moon, Shield, Siren, ScanSearch, Code2, BookOpen, CloudCog, MonitorCog, KanbanSquare, Award } from 'lucide-react';
+import certCcdl2 from '@/assets/cert-ccdl2.png';
+import certAwsCp from '@/assets/cert-aws-cp.png';
 
 const Index = () => {
   const [activeSection, setActiveSection] = useState('home');
@@ -18,7 +20,7 @@ const Index = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'experience', 'projects', 'contact'];
+      const sections = ['home', 'about', 'certifications', 'experience', 'projects', 'contact'];
       const scrollY = window.scrollY;
       sections.forEach((section) => {
         const element = document.getElementById(section);
@@ -193,7 +195,7 @@ const Index = () => {
         <div className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'experience', 'projects', 'contact'].map((section) => (
+              {['home', 'about', 'certifications', 'experience', 'projects', 'contact'].map((section) => (
                 <button
                   key={section}
                   onClick={() => scrollToSection(section)}
@@ -203,6 +205,7 @@ const Index = () => {
                 >
                   {section === 'home' ? 'Início' : 
                    section === 'about' ? 'Sobre Mim' :
+                   section === 'certifications' ? 'Certificações' :
                    section === 'experience' ? 'Experiência' :
                    section === 'projects' ? 'Projetos' : 'Contato'}
                 </button>
@@ -222,106 +225,170 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
-      <section id="home" className="min-h-screen flex items-center justify-center gradient-bg">
-        <div className="container mx-auto px-6 text-center">
-          <div className="animate-fade-in">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              Cyber Security Analyst
-            </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Analista de Segurança Cibernética com atuação em Blue Team e operações de SOC, focado em monitoramento ativo, triagem de alertas, análise e resposta a incidentes e defesa de perímetro. Atuo diretamente no suporte a clientes do setor público com ferramentas de SIEM, EDR/XDR e NGFW.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button 
-                size="lg" 
-                onClick={() => scrollToSection('projects')}
-                className="text-lg px-8 py-6"
-              >
-                Ver Projetos
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => scrollToSection('contact')}
-                className="text-lg px-8 py-6"
-              >
-                Entre em Contato
-              </Button>
-            </div>
-          </div>
-          <div className="mt-16 animate-float">
-            <div className="flex justify-center space-x-8 text-primary/60">
-              <Cloud size={40} />
-              <Server size={40} />
-              <Database size={40} />
-              <Monitor size={40} />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* About Section */}
-      <section id="about" className="py-20">
+      {/* Hero Section - 2 columns */}
+      <section id="home" className="min-h-screen flex items-center pt-24 pb-16 gradient-bg">
         <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">Sobre Mim</h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="animate-slide-in">
-                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                  Analista de Segurança Cibernética com atuação em Blue Team e operações de SOC, focado em monitoramento ativo, triagem de alertas, análise e resposta a incidentes e defesa de perímetro. Atuo diretamente no suporte a clientes do setor público, investigando alertas em ambientes reais de produção com ferramentas de SIEM, EDR/XDR e NGFW.
-                </p>
-                <p className="text-lg text-muted-foreground mb-4 leading-relaxed">
-                  No dia a dia, trabalho com determinação de verdadeiros e falsos positivos, análise de logs de firewall, investigação de ameaças e documentação técnica de incidentes. Tenho experiência prática com detecção de exploração de CVEs, técnicas de persistência, movimentação lateral e campanhas de phishing avançadas.
-                </p>
-                <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                  Graduado em Sistemas de Informação e em constante evolução na área, desenvolvendo também soluções voltadas à automação de threat intelligence e geração de relatórios de segurança.
-                </p>
-                <div className="flex space-x-4">
-                  <Button variant="outline" className="flex items-center gap-2" asChild>
+          <div className="grid lg:grid-cols-12 gap-10 items-start">
+            {/* Left column ~35% */}
+            <aside className="lg:col-span-4 animate-slide-in">
+              <Card className="p-8 card-hover sticky top-28">
+                <div className="flex items-center gap-2 mb-3 text-primary">
+                  <Shield size={18} />
+                  <span className="text-xs uppercase tracking-widest font-semibold">Blue Team · SOC</span>
+                </div>
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight mb-2">
+                  Cyber Security Analyst
+                </h1>
+                <p className="text-lg font-medium text-foreground mb-1">Ionan Nery</p>
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-6">
+                  <MapPin size={14} className="text-primary" />
+                  <span>Teresina, Piauí — Brasil</span>
+                </div>
+
+                <div className="space-y-2 text-sm mb-6">
+                  <a href="mailto:ionannery@gmail.com" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                    <Mail size={16} className="text-primary" />
+                    <span>ionannery@gmail.com</span>
+                  </a>
+                  <a href="tel:+5586998244141" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                    <Phone size={16} className="text-primary" />
+                    <span>+55 (86) 99824-4141</span>
+                  </a>
+                </div>
+
+                <div className="flex gap-2">
+                  <Button variant="outline" size="sm" className="flex-1" asChild>
                     <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                      <Github size={20} />
+                      <Github size={16} />
                       GitHub
                     </a>
                   </Button>
-                  <Button variant="outline" className="flex items-center gap-2" asChild>
+                  <Button variant="outline" size="sm" className="flex-1" asChild>
                     <a href={linkedinUrl} target="_blank" rel="noopener noreferrer">
-                      <Linkedin size={20} />
+                      <Linkedin size={16} />
                       LinkedIn
                     </a>
                   </Button>
                 </div>
+
+                <div className="mt-6 pt-6 border-t border-border flex justify-between text-primary/60">
+                  <Cloud size={22} />
+                  <Server size={22} />
+                  <Database size={22} />
+                  <Monitor size={22} />
+                </div>
+              </Card>
+            </aside>
+
+            {/* Right column ~65% */}
+            <div id="about" className="lg:col-span-8 animate-fade-in">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="h-px w-10 bg-primary" />
+                <span className="text-xs uppercase tracking-widest text-primary font-semibold">Sobre mim</span>
               </div>
-              <div className="animate-fade-in">
-                <Card className="p-6 card-hover">
-                  <h3 className="text-2xl font-semibold mb-4 text-primary">Competências Principais</h3>
-                  <div className="mb-4">
-                    <div className="font-semibold mb-1">Certificações:</div>
-                    <ul className="list-disc list-inside text-muted-foreground text-sm mb-2">
-                      <li>AWS Cloud Practitioner</li>
-                      <li>Fortinet Certified Associate Cybersecurity</li>
-                    </ul>
-                  </div>
-                  <div className="font-semibold mb-1">Principais Competências:</div>
-                  <ul className="list-disc list-inside text-muted-foreground text-sm">
-                    <li><strong>Firewalls</strong> - FortiGate, Palo Alto (PA-5220 / Panorama)</li>
-                    <li><strong>SIEM</strong> - Elastic, Wazuh, Securonix</li>
-                    <li><strong>EDR/XDR</strong> - Cortex XDR (Palo Alto), CrowdStrike Falcon, SentinelOne</li>
-                    <li><strong>Vulnerability Management</strong> - OpenVAS, Qualys</li>
-                    <li><strong>Scripting</strong> - Python, Bash, PowerShell</li>
-                    <li><strong>Frameworks e Metodologias</strong> - MITRE ATT&CK, Cyber Kill Chain, NIST</li>
-                    <li><strong>Cloud Security</strong> - AWS Shield, Amazon GuardDuty, Amazon Inspector</li>
-                    <li><strong>Sistemas Operacionais</strong> - Windows, Linux, macOS</li>
-                    <li><strong>Metodologias Ágeis</strong> - Kanban, Scrum (Jira)</li>
-                  </ul>
-                </Card>
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Defesa, detecção e resposta em ambientes reais.
+              </h2>
+              <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                Analista de Segurança Cibernética com atuação em Blue Team e operações de SOC, focado em monitoramento ativo, triagem de alertas, análise e resposta a incidentes e defesa de perímetro. Atuo no suporte a clientes do setor público, investigando alertas em ambientes reais com SIEM, EDR/XDR e NGFW. Experiência prática com detecção de CVEs, persistência, movimentação lateral e phishing avançado. Graduado em Sistemas de Informação, com foco em automação de threat intelligence e geração de relatórios de segurança.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" onClick={() => scrollToSection('projects')} className="text-base px-6">
+                  Ver Projetos
+                </Button>
+                <Button variant="outline" size="lg" onClick={() => scrollToSection('contact')} className="text-base px-6">
+                  Entre em Contato
+                </Button>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Experience Section */}
+      {/* Skills Section */}
+      <section id="skills" className="py-20 bg-muted/20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-4 animate-fade-in">Principais Competências</h2>
+          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+            Stack técnico organizado por domínio de atuação em segurança cibernética e operações.
+          </p>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              { icon: Shield, title: 'Firewalls', items: ['FortiGate', 'Palo Alto'] },
+              { icon: Siren, title: 'SIEM', items: ['Elastic', 'Wazuh', 'Securonix'] },
+              { icon: ScanSearch, title: 'EDR / XDR', items: ['Cortex XDR (Palo Alto)', 'CrowdStrike Falcon', 'SentinelOne'] },
+              { icon: Database, title: 'Vulnerability Management', items: ['OpenVAS', 'Qualys'] },
+              { icon: Code2, title: 'Scripting', items: ['Python', 'Bash', 'PowerShell'] },
+              { icon: BookOpen, title: 'Frameworks e Metodologias', items: ['MITRE ATT&CK', 'Cyber Kill Chain', 'NIST'] },
+              { icon: CloudCog, title: 'Cloud Security', items: ['AWS Shield', 'Amazon GuardDuty', 'Amazon Inspector'] },
+              { icon: MonitorCog, title: 'Sistemas Operacionais', items: ['Windows', 'Linux', 'macOS'] },
+              { icon: KanbanSquare, title: 'Metodologias Ágeis', items: ['Kanban', 'Scrum (Jira)'] },
+            ].map((cat, idx) => {
+              const Icon = cat.icon;
+              return (
+                <Card key={idx} className="p-6 card-hover animate-fade-in">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="p-2 rounded-md bg-primary/10 text-primary">
+                      <Icon size={20} />
+                    </div>
+                    <h3 className="text-lg font-semibold">{cat.title}</h3>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    {cat.items.map((item, i) => (
+                      <Badge key={i} variant="secondary" className="text-xs">{item}</Badge>
+                    ))}
+                  </div>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* Certifications Section */}
+      <section id="certifications" className="py-20">
+        <div className="container mx-auto px-6">
+          <h2 className="text-4xl font-bold text-center mb-4 animate-fade-in">Certificações</h2>
+          <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
+            Credenciais validadas em segurança cibernética e cloud.
+          </p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {[
+              {
+                name: 'Certified CyberDefender Level 2 (CCDL2)',
+                issuer: 'CyberDefenders',
+                image: certCcdl2,
+              },
+              {
+                name: 'AWS Certified Cloud Practitioner',
+                issuer: 'Amazon Web Services',
+                image: certAwsCp,
+              },
+              {
+                // TODO: Substituir 'image' pelo arquivo da badge oficial quando disponível
+                name: 'Fortinet Certified Associate Cybersecurity',
+                issuer: 'Fortinet',
+                image: null,
+              },
+            ].map((cert, idx) => (
+              <Card key={idx} className="p-6 card-hover animate-fade-in flex items-center gap-5">
+                <div className="flex-shrink-0 w-20 h-20 rounded-lg bg-muted/40 border border-border flex items-center justify-center overflow-hidden">
+                  {cert.image ? (
+                    <img src={cert.image} alt={`Badge ${cert.name}`} className="w-full h-full object-contain p-1" loading="lazy" />
+                  ) : (
+                    <Award size={36} className="text-primary" />
+                  )}
+                </div>
+                <div className="min-w-0">
+                  <h3 className="text-base font-semibold leading-tight mb-1">{cert.name}</h3>
+                  <p className="text-sm text-muted-foreground">{cert.issuer}</p>
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="experience" className="py-20 bg-muted/20">
         <div className="container mx-auto px-6">
           <h2 className="text-4xl font-bold text-center mb-16 animate-fade-in">Experiência Profissional</h2>
